@@ -8,5 +8,5 @@ from .models import UserActivityLog
 @admin.register(UserActivityLog)
 class UserActivityLogAdmin(admin.ModelAdmin):
     list_display = ('user', 'request_path', 'ip_address', 'timestamp')
-    search_fields = ('user__username', 'request_path', 'ip_address')
+    search_fields = ('user__name', 'request_path', 'ip_address')
     list_filter = ('timestamp',)
