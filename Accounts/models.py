@@ -56,4 +56,4 @@ class UserActivityLog(models.Model):
     additional_info = models.JSONField(null=True, blank=True)  # For extra context
 
     def __str__(self):
-        return f"Log for {self.user.username if self.user else 'Anonymous'} on {self.timestamp}"
+        return f"Log for {self.user.name if self.user else 'Anonymous'} on {self.timestamp}"
